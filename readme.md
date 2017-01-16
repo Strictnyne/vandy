@@ -4,6 +4,7 @@ Test project.
 ## Installation
 1. Clone the repo
 2. Go to the root directory and run composer install
+3. After installing Laravel, you may need to configure some permissions. Directories within the  storage and the bootstrap/cache directories should be writable by your web server or Laravel will not run. 
 3. Rename .env.example file to .env
 4. Change the credentials for your database connection in the appropriate section.
     1. Make sure to also change the APP_URL
