@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GitHubController@list_results');
+
+Route::get('/repo/download', 'GitHubController@download_data');
+Route::get('/repo/{id}', 'GitHubController@show_repo_details');
+
+//-- Test URL --//
+//Route::get('/test', 'GitHubController@list_results');

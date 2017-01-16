@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::get('/repos', function() {
+//    return App\GitHubRepos::all();
+    return App\GitHubRepos::paginate(20);
+});
+
+Route::get('/repo/{id}', function($id) {
+    return App\GitHubRepos::findOrFail($id);
+});
