@@ -12,6 +12,7 @@ Test project.
 6. In the same directory run the command php artisan migrate
 7. Create the following cron job to the URL on your localhost /repo/download 
     1. i.e. */15 * * * * curl http://localhost/repo/download
+    1. Make sure to have cURL enabled for PHP for the cron.
     
 Note: The the cron job should run and populate the database tables for the first time
 as soon as crontab runs. After that it'll run every 15 minutes to update the current entries.
